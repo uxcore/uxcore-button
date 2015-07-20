@@ -32,12 +32,12 @@ $ npm run deploy
 ## Usage
 
 ```js
-var Tooltip = require('uxcore-button');
+import {Button, ButtonGroup} from 'uxcore-button';
 React.render(todo, document.getElementById('target'));
 ```
 
 ### demo
-http://uxcore.github.io/uxcore-button/
+http://uxcore.github.io/button/
 
 ## API
 
@@ -45,3 +45,6 @@ http://uxcore.github.io/uxcore-button/
 
 |参数|说明|类型|默认值|
 |---|----|---|------|
+|size|按钮大小(large|medium|small)|string|medium|
+|color|颜色(blue|white|orange)|string|blue|
+|disabled|是否禁用(disabled或true|false)|string|false|
