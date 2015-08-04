@@ -15,7 +15,7 @@
 
 ```sh
 $ git clone https://github.com/uxcore/button
-$ cd uxcore-tooltip
+$ cd uxcore-tree
 $ npm install
 $ npm run dev
 ```
