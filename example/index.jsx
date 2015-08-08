@@ -41,6 +41,10 @@ React.render(
 					<Button size="small" color="orange">Middle</Button>
 					<Button size="small" color="orange">Right</Button>
 				</ButtonGroup>
+				<div>
+					add event:
+					<Button onClick={function(){alert('click me')}}>click me</Button>
+				</div>
 			</div>`}
 		</ExampleCode>
 		<div>
@@ -77,6 +81,10 @@ React.render(
 				<Button size="small" color="orange">Middle</Button>
 				<Button size="small" color="orange">Right</Button>
 			</ButtonGroup>
+		</div>
+		<div>
+			add event:
+			<Button onClick={function(){alert('click me')}}>click me</Button>
 		</div>
 	</div>,
 	document.getElementById('content')

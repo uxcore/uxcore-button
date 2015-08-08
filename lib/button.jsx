@@ -21,8 +21,14 @@ export default class Button extends React.Component {
 		var props = this.props;
 		var colorType = props.disabled ? 'disabled': props.color;
 		var className = `kuma-button kuma-button-${sizeMap[props.size]}${colorMap[colorType]} ${props.additionClass}`;
+		var propEvents = {};
+		Object.keys(props).forEach((key)=>{
+			if (key.startsWith('on')) {
+					propEvents[key] = props[key];
+			}
+		});
 		return (
-			<button className={className} disabled={props.disabled}>{this.props.children}</button>
+			<button className={className} disabled={props.disabled} {...propEvents}>{this.props.children}</button>
 		)
 	}
 }
