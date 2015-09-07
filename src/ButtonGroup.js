@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default class ButtonGroup extends React.Component {
+class ButtonGroup extends React.Component {
 	constructor(props){
 		super(props);
 	}
@@ -18,15 +16,18 @@ export default class ButtonGroup extends React.Component {
 						cls = 'kuma-group-middle';
 					}
 					return React.cloneElement(child, {
-						additionClass: cls
+						additionClass: cls,
+						key: idx
 					});
 				})}
 			</div>
 		)
 	}
 }
-ButtonGroup.displayName = 'buttonGroup';
+ButtonGroup.displayName = 'ButtonGroup';
 ButtonGroup.propTypes = {
 };
 ButtonGroup.defaultProps = {
 };
+
+module.exports = ButtonGroup;

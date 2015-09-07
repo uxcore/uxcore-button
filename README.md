@@ -4,7 +4,7 @@
 - description: uxcore button
 - maintainers: vincent.bian
 - version: 0.1.0
-- lastupdate: 2015/7/20
+- lastupdate: 2015/9/7
 - screenshots:
 
 ---
@@ -19,21 +19,51 @@ $ cd uxcore-tree
 $ npm install
 $ npm run dev
 ```
-nav http://localhost:9090/webpack-dev-server/example/ to see the demo
-
-#### deploy to gh-pages
-[refer to]( http://stackoverflow.com/questions/17643381/how-to-upload-my-angularjs-static-site-to-github-pages)
-```sh
-$ npm run build
-$ git add build & git commit -m 'update deploy files'
-$ npm run deploy
-```
 
 ## Usage
 
 ```js
-import {Button, ButtonGroup} from 'uxcore-button';
-React.render(todo, document.getElementById('target'));
+<div>
+    <div>
+        <span>{"default:"}</span>
+        <Button>Confirm</Button>
+    </div>
+    <div>
+        <span>{"size:"}</span>
+        <Button size="small">small</Button>
+        <Button size="medium">medium</Button>
+        <Button size="large">large</Button>
+    </div>
+    <div>
+        <span>{"status:"}</span>
+        <Button disabled>disabled</Button>
+    </div>
+    <div>
+        <span>{"color:"}</span>
+        <Button color="blue">default blue</Button>
+        <Button color="orange">orange</Button>
+        <Button color="white">white</Button>
+    </div>
+    <div>
+        <span>{"button group:"}</span>
+        <ButtonGroup>
+            <Button>Left</Button>
+            <Button>Middle</Button>
+            <Button>Right</Button>
+        </ButtonGroup>
+        <br/>
+        <ButtonGroup>
+            <Button size="small" color="orange">Left</Button>
+            <Button size="small" color="orange">Middle</Button>
+            <Button size="small" color="orange">Middle</Button>
+            <Button size="small" color="orange">Right</Button>
+        </ButtonGroup>
+    </div>
+    <div>
+        <span>{"add event:"}</span>
+        <Button onClick={function(){alert('click me')}}>click me</Button>
+    </div>
+</div>
 ```
 
 ### demo
