@@ -1,4 +1,4 @@
-let {Button, ButtonGroup} = require('../src');
+let Button = require('../src');
 
 class Demo extends React.Component {
 	constructor(props) {
@@ -9,42 +9,27 @@ class Demo extends React.Component {
 		return (
 			<div>
 				<div>
-					<span>{"default:"}</span>
+					<h2>{"default:"}</h2>
 					<Button>Confirm</Button>
 				</div>
 				<div>
-					<span>{"size:"}</span>
+					<h2>{"size:"}</h2>
 					<Button size="small">small</Button>
 					<Button size="medium">medium</Button>
 					<Button size="large">large</Button>
 				</div>
 				<div>
-					<span>{"status:"}</span>
+					<h2>{"status:"}</h2>
 					<Button disabled>disabled</Button>
 				</div>
 				<div>
-					<span>{"color:"}</span>
+					<h2>{"color:"}</h2>
 					<Button color="blue">default blue</Button>
 					<Button color="orange">orange</Button>
 					<Button color="white">white</Button>
 				</div>
 				<div>
-					<span>{"button group:"}</span>
-					<ButtonGroup>
-						<Button>Left</Button>
-						<Button>Middle</Button>
-						<Button>Right</Button>
-					</ButtonGroup>
-					<br/>
-					<ButtonGroup>
-						<Button size="small" color="orange">Left</Button>
-						<Button size="small" color="orange">Middle</Button>
-						<Button size="small" color="orange">Middle</Button>
-						<Button size="small" color="orange">Right</Button>
-					</ButtonGroup>
-				</div>
-				<div>
-					<span>{"add event:"}</span>
+					<h2>{"add event:"}</h2>
 					<Button onClick={function(){alert('click me')}}>click me</Button>
 				</div>
 			</div>

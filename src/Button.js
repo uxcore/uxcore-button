@@ -11,7 +11,6 @@ const
 		disabled: 'disable'
 	};
 
-let ButtonGroup = require("./ButtonGroup");
 
 class Button extends React.Component {
 	constructor(props){
@@ -46,4 +45,4 @@ Button.defaultProps = {
 	additionClass: ''
 };
 
-module.exports = {Button, ButtonGroup};
+module.exports = Button;
