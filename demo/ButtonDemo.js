@@ -23,10 +23,9 @@ class Demo extends React.Component {
 					<Button disabled>disabled</Button>
 				</div>
 				<div>
-					<h2>{"color:"}</h2>
-					<Button color="blue">default blue</Button>
-					<Button color="orange">orange</Button>
-					<Button color="white">white</Button>
+					<h2>{"type:"}</h2>
+					<Button type="primary">default primary</Button>
+					<Button type="secondary">secondary</Button>
 				</div>
 				<div>
 					<h2>{"add event:"}</h2>

@@ -1,6 +1,10 @@
 # History
 ----
 
+## 0.3.0
+`CHANGED` remove color prop;
+`NEW` type prop;
+
 ## 0.2.0
 
 `CHNAGED` remove export buttonGroup

@@ -1,15 +1,16 @@
+import classnames from 'classnames';
 const
 	sizeMap = {
-		small: 's',
-		medium: 'm',
-		large: 'l'
+		small: 'sm',
+		medium: '',
+		large: 'lg'
 	},
-	colorMap = {
-		blue: 'blue',
-		orange: 'orange',
-		white: 'white',
-		disabled: 'disable'
-	};
+	typeMap = {
+		primary: 'primary',
+		secondary: 'secondary',
+		disabled: 'disabled'
+	},
+	clsPrefix = 'kuma-button';
 
 
 class Button extends React.Component {
@@ -17,9 +18,16 @@ class Button extends React.Component {
 		super(props);
 	}
 	render(){
-		var props = this.props;
-		var colorType = props.disabled ? 'disabled': props.color;
-		var className = `kuma-button kuma-button-${sizeMap[props.size]}${colorMap[colorType]} ${props.additionClass}`;
+		let props = this.props;
+		let type = props.disabled ? 'disabled': props.type;
+		let clsObj = {};
+		if (props.additionClass) {
+			clsObj[props.additionClass] = true;
+		}
+		if (sizeMap[props.size]) {
+			clsObj[`${clsPrefix}-${sizeMap[props.size]}`] = true;
+		}
+		let className = classnames(clsPrefix, `${clsPrefix}-${typeMap[type]}`, clsObj);
 		var propEvents = {};
 		Object.keys(props).forEach((key)=>{
 			if (key.indexOf('on') == 0) {
@@ -31,16 +39,16 @@ class Button extends React.Component {
 		)
 	}
 }
-Button.displayName = 'Button';
+Button.displayName = 'uxcore-button';
 Button.propTypes = {
-	size: React.PropTypes.oneOf(['large', 'medium', 'small']),
-	color: React.PropTypes.oneOf(['blue', 'orange', 'white']),
+	size: React.PropTypes.oneOf(Object.keys(sizeMap)),
+	type: React.PropTypes.oneOf(Object.keys(typeMap)),
 	disabled: React.PropTypes.oneOf(['disabled', true, false]),
 	additionClass: React.PropTypes.string
 };
 Button.defaultProps = {
 	size: 'medium',
-	color: 'blue',
+	type: 'primary',
 	disabled: false,
 	additionClass: ''
 };

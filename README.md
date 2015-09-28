@@ -3,8 +3,8 @@
 - tags: uxcore, button
 - description: uxcore button
 - maintainers: vincent.bian
-- version: 0.1.0
-- lastupdate: 2015/9/7
+- version: 0.3.0
+- lastupdate: 2015/9/28
 - screenshots:
 
 ---
@@ -39,25 +39,9 @@ $ npm run dev
         <Button disabled>disabled</Button>
     </div>
     <div>
-        <span>{"color:"}</span>
-        <Button color="blue">default blue</Button>
-        <Button color="orange">orange</Button>
-        <Button color="white">white</Button>
-    </div>
-    <div>
-        <span>{"button group:"}</span>
-        <ButtonGroup>
-            <Button>Left</Button>
-            <Button>Middle</Button>
-            <Button>Right</Button>
-        </ButtonGroup>
-        <br/>
-        <ButtonGroup>
-            <Button size="small" color="orange">Left</Button>
-            <Button size="small" color="orange">Middle</Button>
-            <Button size="small" color="orange">Middle</Button>
-            <Button size="small" color="orange">Right</Button>
-        </ButtonGroup>
+        <span>{"type:"}</span>
+        <Button type="primary">default blue</Button>
+        <Button type="secondary">orange</Button>
     </div>
     <div>
         <span>{"add event:"}</span>
@@ -76,5 +60,5 @@ http://uxcore.github.io/button/
 |参数|说明|类型|默认值|
 |---|----|---|------|
 |size|按钮大小(large medium small)|string|medium|
-|color|颜色(blue white orange)|string|blue|
+|type|颜色(primary secondary)|string|blue|
 |disabled|是否禁用(disabled或true false)|string|false|

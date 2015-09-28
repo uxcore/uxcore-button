@@ -1,6 +1,6 @@
 /**
  * Button Component Style for uxcore
- * @author 
+ * @author
  *
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
@@ -13,5 +13,59 @@
 
 @pager-active-bg:                      @pagination-active-bg;
 @pager-active-color:                   @pagination-active-color;*/
+.kuma-button {
+  display: inline-block;
+  padding: 0 15px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 0 none;
+  cursor: pointer;
+}
+.kuma-button-primary {
+  background-color: #ff9900;
+  border: 1px solid #ff8800;
+  color: #ffffff;
+}
+.kuma-button-primary:hover {
+  background-color: #ff8800;
+  border: 1px solid #ff6600;
+  color: #ffffff;
+}
+.kuma-button-secondary {
+  background-color: #f2f2f2;
+  border: 1px solid #cccccc;
+  color: #666666;
+}
+.kuma-button-secondary:hover {
+  background-color: #ff9900;
+  border: 1px solid #ff8800;
+  color: #ffffff;
+}
+.kuma-button-disabled {
+  background-color: #cccccc;
+  border: 1px solid #b6b6b6;
+  color: #999999;
+  cursor: not-allowed;
+}
+.kuma-button-disabled:hover {
+  background-color: #cccccc;
+  border: 1px solid #b6bb66;
+  color: #999999;
+}
+.kuma-button-lg {
+  padding: 0 20px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+}
+.kuma-button-sm {
+  padding: 0 10px;
+  height: 22px;
+  font-size: 12px;
+  line-height: 22px;
+}
 
 /*# sourceMappingURL=Button.css.map */
