@@ -1,28 +1,24 @@
 # uxcore-button
 
-- tags: uxcore, button
-- description: uxcore button
-- maintainers: vincent.bian
-- version: 0.3.0
-- lastupdate: 2015/9/28
-- screenshots:
-
 ---
 
 ## TL;DR
 
+button ui component for react
+
 #### setup develop environment
 
 ```sh
-$ git clone https://github.com/uxcore/button
-$ cd uxcore-tree
+$ git clone https://github.com/uxcore/uxcore-button
+$ cd uxcore-button
 $ npm install
-$ npm run dev
+$ gulp server
 ```
 
 ## Usage
 
 ```js
+import Button from 'uxcore-button';
 <div>
     <div>
         <span>{"default:"}</span>
@@ -51,7 +47,7 @@ $ npm run dev
 ```
 
 ### demo
-http://uxcore.github.io/button/
+http://uxcore.github.io/uxcore/css/button/
 
 ## API
 
@@ -59,6 +55,6 @@ http://uxcore.github.io/button/
 
 |参数|说明|类型|默认值|
 |---|----|---|------|
-|size|按钮大小(large medium small)|string|medium|
-|type|类型(primary secondary)|string|blue|
-|disabled|是否禁用(disabled或true false)|string|false|
+|size|按钮大小(`large` `medium` `small`)|string|medium|
+|type|类型(`primary` `secondary`)|string|blue|
+|disabled|是否禁用(`disabled` 或 `true` `false`)|string|false|
