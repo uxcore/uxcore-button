@@ -19,7 +19,7 @@ $ gulp server
 
 ```js
 import Button from 'uxcore-button';
-<div>
+React.render(<div>
     <div>
         <span>{"default:"}</span>
         <Button>Confirm</Button>
@@ -43,7 +43,7 @@ import Button from 'uxcore-button';
         <span>{"add event:"}</span>
         <Button onClick={function(){alert('click me')}}>click me</Button>
     </div>
-</div>
+</div>, document.getElementById('target'));
 ```
 
 ### demo
