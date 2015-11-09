@@ -1,6 +1,9 @@
 # History
 ----
 
+## 0.3.2
+`CHANGED` change style
+
 ## 0.3.1
 `CHANGED` upgrade to react@0.14
 
