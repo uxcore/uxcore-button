@@ -1,6 +1,13 @@
 # History
 ----
 
+## 0.3.1
+`CHANGED` upgrade to react@0.14
+
+## 0.3.0
+`CHANGED` remove color prop;
+`NEW` type prop;
+
 ## 0.2.0
 
 `CHNAGED` remove export buttonGroup
