@@ -1,6 +1,6 @@
 {
   "name": "uxcore-button",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "uxcore-button ui component for react",
   "main": "src/index.js",
   "scripts": {
@@ -8,10 +8,7 @@
     "build": "webpack --config webpack.build.js",
     "deploy": "git subtree push --prefix build origin gh-pages"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:uxcore/button.git"
-  },
+  "repository": "https://github.com/uxcore/uxcore-button.git",
   "bugs": {
     "url": "http://github.com/uxcore/button/issues"
   },
