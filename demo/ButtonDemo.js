@@ -1,4 +1,6 @@
+// import Button, {ButtonGroup} from '../src';
 let Button = require('../src');
+console.log(Button);
 
 class Demo extends React.Component {
 	constructor(props) {
@@ -10,7 +12,7 @@ class Demo extends React.Component {
 			<div>
 				<div>
 					<h2>{"default:"}</h2>
-					<Button>Confirm</Button>
+					<Button className="xxxx">Confirm</Button>
 				</div>
 				<div>
 					<h2>{"size:"}</h2>

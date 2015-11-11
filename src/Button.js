@@ -21,8 +21,8 @@ class Button extends React.Component {
 		let props = this.props;
 		let type = props.disabled ? 'disabled': props.type;
 		let clsObj = {};
-		if (props.additionClass) {
-			clsObj[props.additionClass] = true;
+		if (props.className) {
+			clsObj[props.className] = true;
 		}
 		if (sizeMap[props.size]) {
 			clsObj[`${clsPrefix}-${sizeMap[props.size]}`] = true;
@@ -30,13 +30,13 @@ class Button extends React.Component {
 		let className = classnames(clsPrefix, `${clsPrefix}-${typeMap[type]}`, clsObj);
 		var propEvents = {};
 		Object.keys(props).forEach((key)=>{
-			if (key.indexOf('on') == 0) {
+			if (key.indexOf('on') === 0) {
 					propEvents[key] = props[key];
 			}
 		});
 		return (
-			<button className={className} disabled={props.disabled} {...propEvents}>{this.props.children}</button>
-		)
+			<button className={className} disabled={props.disabled} {...propEvents}>{props.children}</button>
+		);
 	}
 }
 Button.displayName = 'uxcore-button';
@@ -44,13 +44,13 @@ Button.propTypes = {
 	size: React.PropTypes.oneOf(Object.keys(sizeMap)),
 	type: React.PropTypes.oneOf(Object.keys(typeMap)),
 	disabled: React.PropTypes.oneOf(['disabled', true, false]),
-	additionClass: React.PropTypes.string
+	className: React.PropTypes.string
 };
 Button.defaultProps = {
 	size: 'medium',
 	type: 'primary',
 	disabled: false,
-	additionClass: ''
+	className: ''
 };
 
 module.exports = Button;
