@@ -1,6 +1,7 @@
 # History
 ----
-## 0.3.2
+
+## 0.3.3
 `CHANGED` change props additionClass to className
 
 ## 0.3.2
