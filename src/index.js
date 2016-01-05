@@ -7,4 +7,4 @@
  */
 
 import Button from './Button';
-export default Button;
+module.exports = Button;
