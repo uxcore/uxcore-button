@@ -7,4 +7,6 @@
  */
 
 import Button from './Button';
+import ButtonGroup from './ButtonGroup';
+Button.ButtonGroup = ButtonGroup; 
 module.exports = Button;

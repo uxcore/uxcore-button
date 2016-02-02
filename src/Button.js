@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+
 const
 	sizeMap = {
 		small: 'sm',
@@ -8,6 +9,7 @@ const
 	typeMap = {
 		primary: 'primary',
 		secondary: 'secondary',
+		outline: 'outline',
 		disabled: 'disabled'
 	},
 	clsPrefix = 'kuma-button';

@@ -1,6 +1,6 @@
 // import Button, {ButtonGroup} from '../src';
 let Button = require('../src');
-console.log(Button);
+let ButtonGroup = Button.ButtonGroup;
 
 class Demo extends React.Component {
 	constructor(props) {
@@ -28,11 +28,20 @@ class Demo extends React.Component {
 					<h2>{"type:"}</h2>
 					<Button type="primary">default primary</Button>
 					<Button type="secondary">secondary</Button>
+					<Button type="outline">outline</Button>
 				</div>
 				<div>
 					<h2>{"add event:"}</h2>
 					<Button onClick={function(){alert('click me')}}>click me</Button>
 				</div>
+                <div>
+                    <h2>button group:</h2>
+                    <ButtonGroup>
+                        <Button>Left</Button>
+                        <Button>Middle</Button>
+                        <Button>Right</Button>
+                    </ButtonGroup>
+                </div>
 			</div>
 		);
 	}
