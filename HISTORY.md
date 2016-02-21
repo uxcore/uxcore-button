@@ -1,6 +1,9 @@
 # History
 ----
 
+## 0.3.5
+`FIXED` add react require declare 
+
 ## 0.3.3
 `CHANGED` change props additionClass to className
 
