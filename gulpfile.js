@@ -157,7 +157,7 @@ gulp.task('publish', ['pack_build'], function() {
             spawn.sync('git', ['add', '.'], {stdio: 'inherit'});
             spawn.sync('git', ['commit', '-m', 'ver. ' + pkg.version], {stdio: 'inherit'});
             spawn.sync('git', ['push', 'origin', answers.branch], {stdio: 'inherit'});
-            spawn.sync('npm', ['publsh'], {stdio: 'inherit'});
+            spawn.sync('npm', ['publish'], {stdio: 'inherit'});
         })
     }, 0)
     
