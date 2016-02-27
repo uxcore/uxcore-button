@@ -8,7 +8,25 @@ var colors = require('colors/safe');
 
 colors.setTheme({
     info: ['bold', 'green']
-})
+});
+
+var pkg = JSON.parse(file.readFileAsString('package.json'));
+
+var versionCompare = function(a, b) {
+    var aArr = a.split('.');
+    var bArr = b.split('.');
+    var larger = false;
+    for (var i = 0; i < 3; i++) {
+        if (parseInt(aArr[i]) === parseInt(bArr[i])) {
+
+        }
+        else {
+            larger = parseInt(aArr[i]) > parseInt(bArr[i]);
+            break;
+        }
+    }
+    return larger;
+}
 
 var webpack = require('webpack');
 
@@ -30,29 +48,6 @@ var concat = require('gulp-concat');
 
 // https://www.npmjs.com/package/gulp-just-replace/
 var replace = require('gulp-just-replace');
-
-/**
- * @name versionCompare
- * @description compare the package version, return true if a > b
- */
-var versionCompare = function(a, b) {
-    var aArr = a.split('.');
-    var bArr = b.split('.');
-    var large = false;
-    for (var i = 0; i < 3; i++) {
-        if (parseInt(aArr[i]) === parseInt(bArr[i])) {
-
-        }
-        else {
-            large = parseInt(aArr[i]) > parseInt(bArr[i]);
-            break;
-        }
-    }
-    return large;
-}
-
-var pkg = JSON.parse(file.readFileAsString('package.json'));
-
 
 gulp.task('pack_demo', function(cb) {
     webpack(require('./webpack.dev.js'), function (err, stats) {
@@ -124,7 +119,6 @@ gulp.task('server', [
 
 gulp.task('default', ['pack_build'], function() {
 
-    
 });
 
 gulp.task('publish', ['pack_build'], function() {
@@ -168,4 +162,4 @@ gulp.task('publish', ['pack_build'], function() {
         })
     }, 0)
     
-})
+});

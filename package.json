@@ -1,6 +1,6 @@
 {
  "name": "uxcore-button",
- "version": "0.3.10",
+ "version": "0.3.11",
  "description": "uxcore-button ui component for react",
  "main": "build/index.js",
  "scripts": {
@@ -46,7 +46,7 @@
  },
  "dependencies": {
   "classnames": "^2.1.2",
-  "object-assign": "^2.0.0"
+  "object-assign": "^4.0.0"
  },
  "peerDependencies": {
   "react": ">=0.13.0"

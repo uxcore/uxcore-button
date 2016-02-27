@@ -1,6 +1,9 @@
 # History
 ----
 
+## 0.3.11
+`CHANGED` update scaffold
+
 ## 0.3.5
 `FIXED` add react require declare 
 
