@@ -1,6 +1,6 @@
 {
  "name": "uxcore-button",
- "version": "0.3.7",
+ "version": "0.3.8",
  "description": "uxcore-button ui component for react",
  "main": "build/index.js",
  "scripts": {
