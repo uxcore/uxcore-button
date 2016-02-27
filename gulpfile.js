@@ -4,6 +4,11 @@ var fs = require('fs');
 var inquirer = require('inquirer');
 var spawn = require('cross-spawn');
 var file = require('html-wiring');
+var colors = require('colors/safe');
+
+colors.setTheme({
+    info: ['bold', 'green']
+})
 
 var webpack = require('webpack');
 
@@ -154,9 +159,11 @@ gulp.task('publish', ['pack_build'], function() {
         inquirer.prompt(questions, function(answers) {
             pkg.version = answers.version;
             file.writeFileFromString(JSON.stringify(pkg, null, ' '), 'package.json');
+            console.log(colors.info('#### Git Info ###'));
             spawn.sync('git', ['add', '.'], {stdio: 'inherit'});
             spawn.sync('git', ['commit', '-m', 'ver. ' + pkg.version], {stdio: 'inherit'});
             spawn.sync('git', ['push', 'origin', answers.branch], {stdio: 'inherit'});
+            console.log(colors.info('#### Npm Info ###'));
             spawn.sync('npm', ['publish'], {stdio: 'inherit'});
         })
     }, 0)
