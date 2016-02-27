@@ -154,9 +154,9 @@ gulp.task('publish', ['pack_build'], function() {
         inquirer.prompt(questions, function(answers) {
             pkg.version = answers.version;
             file.writeFileFromString(JSON.stringify(pkg, null, ' '), 'package.json');
-            spawn.sync('git', ['add', '.']);
-            spawn.sync('git', ['commit', '-m', 'ver. ' + pkg.version]);
-            spawn.sync('git', ['push', 'origin', answers.branch]);
+            spawn.sync('git', ['add', '.'], {stdio: 'inherit'});
+            spawn.sync('git', ['commit', '-m', 'ver. ' + pkg.version], {stdio: 'inherit'});
+            spawn.sync('git', ['push', 'origin', answers.branch], {stdio: 'inherit'});
             spawn.sync('npm', ['publsh']);
         })
     }, 0)
