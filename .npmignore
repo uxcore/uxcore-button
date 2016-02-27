@@ -1,5 +1,6 @@
-build/
+bower_components/
 *.cfg
+node_modules/
 nohup.out
 *.iml
 .idea/
@@ -20,10 +21,8 @@ Thumbs.db
 out/
 .build
 node_modules
+_site
+sea-modules
+spm_modules
 .cache
-example
-tests
-.*
-style/*
-webpack.*.js
-loader.config.js
+dist
