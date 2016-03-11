@@ -1,6 +1,15 @@
 # History
 ----
 
+## 0.4.0
+`NEW` style
+
+## 0.3.12
+`CHANGED` update scaffold
+
+## 0.3.5
+`FIXED` add react require declare 
+
 ## 0.3.3
 `CHANGED` change props additionClass to className
 
