@@ -1,8 +1,11 @@
 # History
 ----
 
+## 0.4.1
+`NEW` add visual engine support
+
 ## 0.4.0
-`NEW` style
+`NEW` style change to new standard
 
 ## 0.3.12
 `CHANGED` update scaffold
