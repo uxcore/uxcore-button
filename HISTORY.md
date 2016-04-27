@@ -1,6 +1,9 @@
 # History
 ----
 
+## 0.4.3
+`FIX` remove peer denpendency `react`
+
 ## 0.4.2
 `FIX` fix ve prototype typo
 
