@@ -1,6 +1,9 @@
 # History
 ----
 
+## 0.4.2
+`FIX` fix ve prototype typo
+
 ## 0.4.1
 `NEW` add visual engine support
 

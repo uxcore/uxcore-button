@@ -14,7 +14,7 @@ module.exports = Bundle.createPrototype({
     isInline: false,
     isContainer: false,
     canDropto: true,
-    conDroping: false,
+    canDroping: false,
     configure: [{
             name: "size",
             title: "尺寸",
