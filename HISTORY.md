@@ -1,8 +1,11 @@
 # History
 ----
 
+## 0.4.5
+`NEW` add new prop `style`
+
 ## 0.4.4
-`NEW` add prop `style`
+`NEW` add new prop `htmlType`
 
 ## 0.4.3
 `FIX` remove peer denpendency `react`

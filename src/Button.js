@@ -22,23 +22,22 @@ class Button extends React.Component {
     }
     render() {
         let props = this.props;
-        let type = props.disabled ? 'disabled' : props.type;
+        let {type, disabled, className, size, children, htmlType, ...others} = props;
+        type = disabled ? 'disabled' : type;
         let clsObj = {};
-        if (props.className) {
-            clsObj[props.className] = true;
+        if (className) {
+            clsObj[className] = true;
         }
-        if (sizeMap[props.size]) {
-            clsObj[`${clsPrefix}-${sizeMap[props.size]}`] = true;
+        if (sizeMap[size]) {
+            clsObj[`${clsPrefix}-${sizeMap[size]}`] = true;
         }
-        let className = classnames(clsPrefix, `${clsPrefix}-${typeMap[type]}`, clsObj);
-        var propEvents = {};
-        Object.keys(props).forEach((key) => {
-            if (key.indexOf('on') === 0) {
-                propEvents[key] = props[key];
-            }
-        });
+        let classNames = classnames(clsPrefix, `${clsPrefix}-${typeMap[type]}`, clsObj);
         return (
-            <button className={className} disabled={props.disabled} style={props.style} {...propEvents}>
+            <button
+                type={htmlType}
+                className={classNames} 
+                disabled={disabled} 
+                {...others}>
               {props.children}
             </button>
         );
@@ -74,14 +73,20 @@ Button.propTypes = {
     children: React.PropTypes.oneOfType([
         React.PropTypes.element,
         React.PropTypes.string
-    ])
+    ]),
+    /**
+     * @title <button> 的 type
+     * @veIgnore
+     */
+    htmlType: React.PropTypes.oneOf(['submit', 'button', 'reset']),
 };
 Button.defaultProps = {
     size: 'medium',
     type: 'primary',
     disabled: false,
     className: '',
-    children: 'Button'
+    children: 'Button',
+    htmlType: 'button'
 };
 
 module.exports = Button;

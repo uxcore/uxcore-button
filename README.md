@@ -69,6 +69,8 @@ http://uxcore.github.io/uxcore/css/button/
 |type|类型(`primary` `secondary` `outline`)|string|blue|
 |disabled|是否禁用(`disabled` 或 `true` `false`)|string|false|
 |className|增加额外的class|string|''|
+|htmlType|html dom 的 type 属性(`submit` `button` `reset`)|string|button|
+|style|style 属性|object||
 
 #### ButtonGroup
 

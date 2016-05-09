@@ -12,7 +12,7 @@ class Demo extends React.Component {
 			<div>
 				<div>
 					<h2>{"default:"}</h2>
-					<Button className="xxxx">Confirm</Button>
+					<Button htmlType="submit" className="xxxx" style={{color: '#f00'}}>Confirm</Button>
 				</div>
 				<div>
 					<h2>{"size:"}</h2>
