@@ -38,10 +38,10 @@ class Button extends React.Component {
             }
         });
         return (
-            <button className={className} disabled={props.disabled} {...propEvents}>
+            <button className={className} disabled={props.disabled} style={props.style} {...propEvents}>
               {props.children}
             </button>
-            );
+        );
     }
 }
 Button.displayName = 'uxcore-button';
@@ -51,6 +51,10 @@ Button.propTypes = {
      */
     size: React.PropTypes.oneOf(['small', 'medium', 'large']),
     /**
+     * @title 样式
+     */
+    style: React.PropTypes.object,
+     /**
      * @title 类型
      */
     type: React.PropTypes.oneOf(['primary', 'secondary', 'outline', 'disabled']),

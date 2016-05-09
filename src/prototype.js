@@ -11,7 +11,7 @@ module.exports = Bundle.createPrototype({
     canHovering: true,
     canSelecting: true,
     canDraging: true,
-    isInline: false,
+    isInline: true,
     isContainer: false,
     canDropto: true,
     canDroping: false,
@@ -23,6 +23,14 @@ module.exports = Bundle.createPrototype({
             fieldStyle: "block",
             fieldCollapsed: false,
             setter: <ChoiceSetter options={[{value:'small'},{value:'medium'},{value:'large'}]} />
+        }, {
+            name: "style",
+            title: "样式",
+            defaultValue: {},
+            required: false,
+            fieldStyle: "accordion",
+            fieldCollapsed: false,
+            setter: <JsonSetter />
         }, {
             name: "type",
             title: "类型",

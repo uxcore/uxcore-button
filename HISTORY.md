@@ -1,6 +1,9 @@
 # History
 ----
 
+## 0.4.4
+`NEW` add prop `style`
+
 ## 0.4.3
 `FIX` remove peer denpendency `react`
 
