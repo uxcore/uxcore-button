@@ -1,6 +1,10 @@
 # History
 ----
 
+## 0.4.6
+* `CHANGED` new scaffold & eslint 
+* `REMOVE` useless source file
+
 ## 0.4.5
 `NEW` add new prop `style`
 
