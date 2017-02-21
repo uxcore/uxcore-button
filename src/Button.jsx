@@ -13,29 +13,32 @@ const typeMap = {
   disabled: 'disabled',
 };
 
-const Button = (props) => {
-  let type = props.type;
-  const { disabled, className, size, children, htmlType, prefixCls, ...others } = props;
-  type = disabled ? 'disabled' : type;
-  const clsObj = {};
-  if (className) {
-    clsObj[className] = true;
-  }
-  if (sizeMap[size]) {
-    clsObj[`${prefixCls}-${sizeMap[size]}`] = true;
-  }
-  const classNames = classnames(prefixCls, `${prefixCls}-${typeMap[type]}`, clsObj);
-  return (
-    <button
-      {...others}
-      type={htmlType}
-      className={classNames}
-      disabled={disabled}
-    >
-      {children}
-    </button>
+class Button extends React.Component {
+  render() {
+    let type = this.props.type;
+    const { disabled, className, size, children, htmlType, prefixCls, ...others } = this.props;
+    type = disabled ? 'disabled' : type;
+    const clsObj = {};
+    if (className) {
+      clsObj[className] = true;
+    }
+    if (sizeMap[size]) {
+      clsObj[`${prefixCls}-${sizeMap[size]}`] = true;
+    }
+    const classNames = classnames(prefixCls, `${prefixCls}-${typeMap[type]}`, clsObj);
+    return (
+      <button
+        {...others}
+        type={htmlType}
+        className={classNames}
+        disabled={disabled}
+      >
+        {children}
+      </button>
     );
-};
+  }
+}
+
 Button.displayName = 'uxcore-button';
 Button.propTypes = {
   prefixCls: React.PropTypes.string,
