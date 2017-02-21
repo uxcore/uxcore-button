@@ -1,6 +1,10 @@
 # History
 ----
 
+## 0.4.7
+
+`CHANGED` use normal component declaration instead of `stateless function` (#7)
+
 ## 0.4.6
 * `CHANGED` new scaffold & eslint 
 * `REMOVE` useless source file
