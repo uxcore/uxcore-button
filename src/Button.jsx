@@ -1,5 +1,6 @@
-import React from 'react';
+import { Component, PropTypes } from 'react';
 import classnames from 'classnames';
+import LoadingIcon from './Loading.svg';
 
 const sizeMap = {
   small: 'sm',
@@ -13,19 +14,16 @@ const typeMap = {
   disabled: 'disabled',
 };
 
-class Button extends React.Component {
+class Button extends Component {
   render() {
     let type = this.props.type;
-    const { disabled, className, size, children, htmlType, prefixCls, ...others } = this.props;
+    const { disabled, className, size, children, htmlType, prefixCls, loading, ...others } = this.props;
     type = disabled ? 'disabled' : type;
-    const clsObj = {};
-    if (className) {
-      clsObj[className] = true;
-    }
-    if (sizeMap[size]) {
-      clsObj[`${prefixCls}-${sizeMap[size]}`] = true;
-    }
-    const classNames = classnames(prefixCls, `${prefixCls}-${typeMap[type]}`, clsObj);
+    const classNames = classnames(prefixCls, `${prefixCls}-${typeMap[type]}`, {
+      [className]: className,
+      [`${prefixCls}-${sizeMap[size]}`]: !!sizeMap[size],
+      [`${prefixCls}-loading`]: loading,
+    });
     return (
       <button
         {...others}
@@ -34,6 +32,7 @@ class Button extends React.Component {
         disabled={disabled}
       >
         {children}
+        {loading ? <LoadingIcon className="loading-icon" /> : null}
       </button>
     );
   }
@@ -41,17 +40,18 @@ class Button extends React.Component {
 
 Button.displayName = 'uxcore-button';
 Button.propTypes = {
-  prefixCls: React.PropTypes.string,
-  disabled: React.PropTypes.bool,
-  size: React.PropTypes.oneOf(['small', 'medium', 'large']),
-  style: React.PropTypes.object,
-  type: React.PropTypes.oneOf(['primary', 'secondary', 'outline', 'disabled']),
-  className: React.PropTypes.string,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.element,
-    React.PropTypes.string,
+  prefixCls: PropTypes.string,
+  disabled: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  style: PropTypes.object,
+  type: PropTypes.oneOf(['primary', 'secondary', 'outline', 'disabled']),
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
   ]),
-  htmlType: React.PropTypes.oneOf(['submit', 'button', 'reset']),
+  htmlType: PropTypes.oneOf(['submit', 'button', 'reset']),
+  loading: PropTypes.bool,
 };
 Button.defaultProps = {
   prefixCls: 'kuma-button',
@@ -61,6 +61,7 @@ Button.defaultProps = {
   className: '',
   children: 'Button',
   htmlType: 'button',
+  loading: true,
 };
 
 module.exports = Button;

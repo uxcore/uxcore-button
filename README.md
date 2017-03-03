@@ -71,6 +71,7 @@ http://uxcore.github.io/uxcore/css/button/
 |className|增加额外的class|string|''|
 |htmlType|html dom 的 type 属性(`submit` `button` `reset`)|string|button|
 |style|style 属性|object||
+|loading|loading状态|bool|false|
 
 #### ButtonGroup
 

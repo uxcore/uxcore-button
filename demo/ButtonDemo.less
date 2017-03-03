@@ -5,13 +5,15 @@
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
- 
-h2 {
-    font-size: 24px;
-}
-
-* {
+html {
     box-sizing: border-box;
+    * {
+        box-sizing: inherit;
+    }
 }
 
+@import '../node_modules/kuma-base/theme/orange.less';
+@import "../node_modules/kuma-base/core/scaffolding.less";
+@import "../node_modules/kuma-base/core/button.less";
+@import '../src/Button.less';
 
