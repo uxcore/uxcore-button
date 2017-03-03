@@ -1,6 +1,10 @@
-import { Component, PropTypes } from 'react';
+import React from 'react';
 import classnames from 'classnames';
-import LoadingIcon from './Loading.svg';
+// import LoadingIcon from './Loading.svg';
+
+const { Component, PropTypes } = React;
+
+const LoadingIcon = () => <div />;
 
 const sizeMap = {
   small: 'sm',
@@ -61,7 +65,7 @@ Button.defaultProps = {
   className: '',
   children: 'Button',
   htmlType: 'button',
-  loading: true,
+  loading: false,
 };
 
 module.exports = Button;

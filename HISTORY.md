@@ -1,6 +1,10 @@
 # History
 ----
 
+## 0.4.9
+
+* `FIX` hotfix svg bug
+
 ## 0.4.8
 * `FEAT` support 'loading' prop
 
