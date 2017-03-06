@@ -6,6 +6,7 @@
 * `FIX` hotfix svg bug
 
 ## 0.4.8
+
 * `FEAT` support 'loading' prop
 
 ## 0.4.7

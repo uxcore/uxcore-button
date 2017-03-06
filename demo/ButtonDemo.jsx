@@ -35,6 +35,10 @@ class Demo extends React.Component {
           <Button onClick={function () { alert('click me'); }}>click me</Button>
         </div>
         <div>
+          <h2>{'loading:'}</h2>
+          <Button loading>Loading</Button>
+        </div>
+        <div>
           <h2>button group:</h2>
           <ButtonGroup>
             <Button>Left</Button>

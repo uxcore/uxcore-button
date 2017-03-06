@@ -5,24 +5,33 @@
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
- @keyframes rotation {
-     0% {
-        transform: rotate(0);
-     }
-     100% {
-        transform: rotate(360deg);
-     }
- }
-.kuma-button-loading {
-    position: relative;
-    .loading-icon {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin: -8px 0 0 -8px;
-        width: 16px;
-        height: 16px;
-        animation: rotation linear 2s;
-        animation-iteration-count: infinite;
+
+@__buttonPrefixCls: kuma-button;
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.@{__buttonPrefixCls}-loading {
+  position: relative;
+}
+
+.@{__buttonPrefixCls}-loading-icon {
+  width: 16px;
+  height: 16px;
+  animation: rotation linear 2s;
+  animation-iteration-count: infinite;
+  vertical-align: middle;
+}
+
+.@{__buttonPrefixCls}-has-icon {
+    > span {
+        margin-left: 5px;
+        vertical-align: middle;
     }
 }
