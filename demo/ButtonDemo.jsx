@@ -1,8 +1,10 @@
 const React = require('react');
+const Icon = require('uxcore-icon');
 
 const Button = require('../src');
 
 const { ButtonGroup } = Button;
+
 
 /* eslint-disable react/prefer-stateless-function */
 
@@ -36,7 +38,21 @@ class Demo extends React.Component {
         </div>
         <div>
           <h2>{'loading:'}</h2>
-          <Button loading>Loading</Button>
+          <Button loading size="small">small</Button>
+          <Button loading size="medium">medium</Button>
+          <Button loading size="large">large</Button>
+          <Button loading type="primary">primary</Button>
+          <Button loading type="secondary">secondary</Button>
+          <Button loading type="outline">outline</Button>
+        </div>
+        <div>
+          <h2>{'图标按钮'}</h2>
+          <Button size="small"><Icon name="xiazai" />small</Button>
+          <Button size="medium"><Icon name="xiazai" />medium</Button>
+          <Button size="large"><Icon name="xiazai" />large</Button>
+          <Button type="primary"><Icon name="xiazai" />primary</Button>
+          <Button type="secondary"><Icon name="xiazai" />secondary</Button>
+          <Button type="outline"><Icon name="xiazai" />outline</Button>
         </div>
         <div>
           <h2>button group:</h2>

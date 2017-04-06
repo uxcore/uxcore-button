@@ -1,6 +1,11 @@
 # History
 ----
 
+## 0.4.11
+
+* `CHANGED` change loading icon
+* `CHANGED` add icon button adaption
+
 ## 0.4.9
 
 * `FIX` hotfix svg bug
