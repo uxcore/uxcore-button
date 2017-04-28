@@ -33,7 +33,7 @@ class Button extends Component {
       [className]: className,
       [`${prefixCls}-${sizeMap[size]}`]: !!sizeMap[size],
       [`${prefixCls}-loading`]: loading,
-      [`${prefixCls}-disabled`]: disabled,
+      [`${prefixCls}-white`]: type === 'disabled' && this.props.type === 'white',
       [`${prefixCls}-ghost`]: ghost,
       [`${prefixCls}-has-icon`]: loading,
     });
@@ -57,7 +57,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   style: PropTypes.object,
-  type: PropTypes.oneOf(['primary', 'secondary', 'outline', 'disabled']),
+  type: PropTypes.oneOf(['primary', 'secondary', 'outline', 'white']),
   className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.element,
