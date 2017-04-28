@@ -16,10 +16,10 @@ const sizeMap = {
 
 class Button extends Component {
   render() {
+    let type = this.props.type;
     const {
       disabled,
       className,
-      type,
       size,
       children,
       htmlType,
@@ -28,7 +28,7 @@ class Button extends Component {
       ghost,
       ...others
     } = this.props;
-    // type = disabled ? 'disabled' : type;
+    type = disabled ? 'disabled' : type;
     const classNames = classnames(prefixCls, `${prefixCls}-${type}`, {
       [className]: className,
       [`${prefixCls}-${sizeMap[size]}`]: !!sizeMap[size],
