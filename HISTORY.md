@@ -1,6 +1,11 @@
 # History
 ----
 
+## 0.4.12
+
+* `NEW` support new prop `ghost`
+* `CHANGED` prop `type` support new value `white`
+
 ## 0.4.11
 
 * `CHANGED` change loading icon

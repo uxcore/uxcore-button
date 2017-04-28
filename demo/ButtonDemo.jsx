@@ -25,12 +25,40 @@ class Demo extends React.Component {
         <div>
           <h2>{'status:'}</h2>
           <Button disabled>disabled</Button>
+          <Button disabled type="primary">default primary</Button>
+          <Button disabled type="secondary">secondary</Button>
+          <Button disabled type="outline">outline</Button>
         </div>
         <div>
           <h2>{'type:'}</h2>
           <Button type="primary">default primary</Button>
           <Button type="secondary">secondary</Button>
           <Button type="outline">outline</Button>
+        </div>
+        <div>
+          <h2>{'ghost:'}</h2>
+          <div
+            style={{
+              background: 'lightblue',
+              margin: '10px 0',
+              padding: '10px 0',
+            }}
+          >
+            <Button ghost type="secondary">secondary</Button>
+            <Button ghost type="outline">outline</Button>
+            <Button ghost disabled type="secondary">secondary</Button>
+            <Button ghost disabled type="outline">outline</Button>
+          </div>
+          <div
+            style={{
+              background: '#3D4E5B',
+              margin: '10px 0',
+              padding: '10px 0',
+            }}
+          >
+            <Button ghost type="white">secondary</Button>
+            <Button ghost type="white" disabled>secondary</Button>
+          </div>
         </div>
         <div>
           <h2>{'add event:'}</h2>

@@ -12,31 +12,29 @@ const sizeMap = {
   medium: '',
   large: 'lg',
 };
-const typeMap = {
-  primary: 'primary',
-  secondary: 'secondary',
-  outline: 'outline',
-  disabled: 'disabled',
-};
+
 
 class Button extends Component {
   render() {
-    let type = this.props.type;
     const {
       disabled,
       className,
+      type,
       size,
       children,
       htmlType,
       prefixCls,
       loading,
+      ghost,
       ...others
     } = this.props;
-    type = disabled ? 'disabled' : type;
-    const classNames = classnames(prefixCls, `${prefixCls}-${typeMap[type]}`, {
+    // type = disabled ? 'disabled' : type;
+    const classNames = classnames(prefixCls, `${prefixCls}-${type}`, {
       [className]: className,
       [`${prefixCls}-${sizeMap[size]}`]: !!sizeMap[size],
       [`${prefixCls}-loading`]: loading,
+      [`${prefixCls}-disabled`]: disabled,
+      [`${prefixCls}-ghost`]: ghost,
       [`${prefixCls}-has-icon`]: loading,
     });
     return (
@@ -67,6 +65,7 @@ Button.propTypes = {
   ]),
   htmlType: PropTypes.oneOf(['submit', 'button', 'reset']),
   loading: PropTypes.bool,
+  ghost: PropTypes.bool,
 };
 Button.defaultProps = {
   prefixCls: 'kuma-button',
@@ -77,6 +76,7 @@ Button.defaultProps = {
   children: 'Button',
   htmlType: 'button',
   loading: false,
+  ghost: false,
 };
 
 module.exports = Button;
