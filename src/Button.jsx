@@ -1,9 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-
 import LoadingIcon from './Loading';
-
-const { Component, PropTypes } = React;
+import PropTypes from 'prop-types';
+const { Component } = React;
 
 // const LoadingIcon = () => <div />;
 
@@ -12,7 +11,6 @@ const sizeMap = {
   medium: '',
   large: 'lg',
 };
-
 
 class Button extends Component {
   render() {
@@ -26,7 +24,7 @@ class Button extends Component {
       prefixCls,
       loading,
       ghost,
-      ...others
+      ...others,
     } = this.props;
     type = disabled ? 'disabled' : type;
     const classNames = classnames(prefixCls, `${prefixCls}-${type}`, {
