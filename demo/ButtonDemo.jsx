@@ -1,7 +1,6 @@
-const React = require('react');
-const Icon = require('uxcore-icon');
-
-const Button = require('../src');
+import React from 'react';
+import Icon from 'uxcore-icon';
+import Button from '../src';
 
 const { ButtonGroup } = Button;
 
@@ -75,12 +74,12 @@ class Demo extends React.Component {
         </div>
         <div>
           <h2>{'图标按钮'}</h2>
-          <Button size="small"><Icon name="xiazai" />small</Button>
-          <Button size="medium"><Icon name="xiazai" />medium</Button>
-          <Button size="large"><Icon name="xiazai" />large</Button>
-          <Button type="primary"><Icon name="xiazai" />primary</Button>
-          <Button type="secondary"><Icon name="xiazai" />secondary</Button>
-          <Button type="outline"><Icon name="xiazai" />outline</Button>
+          <Button size="small"><div><Icon name="xiazai" />small</div></Button>
+          <Button size="medium"><div><Icon name="xiazai" />medium</div></Button>
+          <Button size="large"><div><Icon name="xiazai" />large</div></Button>
+          <Button type="primary"><div><Icon name="xiazai" />primary</div></Button>
+          <Button type="secondary"><div><Icon name="xiazai" />secondary</div></Button>
+          <Button type="outline"><div><Icon name="xiazai" />outline</div></Button>
         </div>
         <div>
           <h2>button group:</h2>
@@ -95,4 +94,4 @@ class Demo extends React.Component {
   }
 }
 
-module.exports = Demo;
+export default Demo;
