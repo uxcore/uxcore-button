@@ -1,7 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-import LoadingIcon from './Loading';
 import PropTypes from 'prop-types';
+import LoadingIcon from './Loading';
+
 const { Component } = React;
 
 // const LoadingIcon = () => <div />;
@@ -24,7 +25,7 @@ class Button extends Component {
       prefixCls,
       loading,
       ghost,
-      ...others,
+      ...others
     } = this.props;
     type = disabled ? 'disabled' : type;
     const classNames = classnames(prefixCls, `${prefixCls}-${type}`, {

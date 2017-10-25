@@ -1,6 +1,10 @@
 # History
 ----
 
+## 0.4.15
+
+`CHANGED` fit React@15
+
 ## 0.4.12
 
 * `NEW` support new prop `ghost`
