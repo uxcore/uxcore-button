@@ -1,6 +1,11 @@
 # History
 ----
 
+## 0.4.16
+
+* `NEW` add new prop `danger`
+* `Deprecated` Button.ButtonGroup
+
 ## 0.4.15
 
 `CHANGED` fit React@15

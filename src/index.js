@@ -9,5 +9,10 @@
 import Button from './Button';
 import ButtonGroup from './ButtonGroup';
 
-Button.ButtonGroup = ButtonGroup;
+Object.defineProperty(Button, 'ButtonGroup', {
+  get() {
+    console.warn('Button.ButtonGroup is deprecated, use uxcore-button-group instead');
+    return ButtonGroup;
+  },
+});
 export default Button;

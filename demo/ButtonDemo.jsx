@@ -2,9 +2,6 @@ import React from 'react';
 import Icon from 'uxcore-icon';
 import Button from '../src';
 
-const { ButtonGroup } = Button;
-
-
 /* eslint-disable react/prefer-stateless-function */
 
 class Demo extends React.Component {
@@ -33,6 +30,12 @@ class Demo extends React.Component {
           <Button type="primary">default primary</Button>
           <Button type="secondary">secondary</Button>
           <Button type="outline">outline</Button>
+        </div>
+        <div>
+          <h2>{'danger:'}</h2>
+          <Button type="primary" danger>default primary</Button>
+          <Button type="secondary" danger>secondary</Button>
+          <Button type="outline" danger>outline</Button>
         </div>
         <div>
           <h2>{'ghost:'}</h2>
@@ -80,14 +83,6 @@ class Demo extends React.Component {
           <Button type="primary"><Icon name="xiazai" />primary</Button>
           <Button type="secondary"><Icon name="xiazai" />secondary</Button>
           <Button type="outline"><Icon name="xiazai" />outline</Button>
-        </div>
-        <div>
-          <h2>button group:</h2>
-          <ButtonGroup>
-            <Button>Left</Button>
-            <Button>Middle</Button>
-            <Button>Right</Button>
-          </ButtonGroup>
         </div>
       </div>
     );

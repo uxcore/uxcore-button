@@ -25,6 +25,7 @@ class Button extends Component {
       prefixCls,
       loading,
       ghost,
+      danger,
       ...others
     } = this.props;
     type = disabled ? 'disabled' : type;
@@ -34,6 +35,7 @@ class Button extends Component {
       [`${prefixCls}-loading`]: loading,
       [`${prefixCls}-white`]: type === 'disabled' && this.props.type === 'white',
       [`${prefixCls}-ghost`]: ghost,
+      [`${prefixCls}-danger`]: danger,
       [`${prefixCls}-has-icon`]: loading,
     });
     return (
@@ -58,13 +60,11 @@ Button.propTypes = {
   style: PropTypes.object,
   type: PropTypes.oneOf(['primary', 'secondary', 'outline', 'white']),
   className: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.string,
-  ]),
+  children: PropTypes.node,
   htmlType: PropTypes.oneOf(['submit', 'button', 'reset']),
   loading: PropTypes.bool,
   ghost: PropTypes.bool,
+  danger: PropTypes.bool,
 };
 Button.defaultProps = {
   prefixCls: 'kuma-button',
@@ -76,6 +76,7 @@ Button.defaultProps = {
   htmlType: 'button',
   loading: false,
   ghost: false,
+  danger: false,
 };
 
 module.exports = Button;
