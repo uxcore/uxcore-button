@@ -1,6 +1,10 @@
 # History
 ----
 
+## 0.4.17
+
+* `CHANGED` unify prop `size` enumerator naming (from `medium` to `middle`)
+
 ## 0.4.16
 
 * `NEW` add new prop `danger`

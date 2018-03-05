@@ -26,7 +26,7 @@ http://uxcore.github.io/uxcore/css/button/
 
 |参数|说明|类型|默认值|
 |---|----|---|------|
-|size|按钮大小(`large` `medium` `small`)|string|medium|
+|size|按钮大小(`large` `middle` `small`)|string|medium|
 |type|类型(`primary` `secondary` `outline` `white`)|string|primary|
 |disabled|是否禁用(`disabled` 或 `true` `false`)|string|false|
 |ghost|是否显示为幽灵按钮|bool|false|

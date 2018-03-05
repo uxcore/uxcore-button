@@ -10,6 +10,7 @@ const { Component } = React;
 const sizeMap = {
   small: 'sm',
   medium: '',
+  middle: '',
   large: 'lg',
 };
 
@@ -56,7 +57,7 @@ Button.displayName = 'uxcore-button';
 Button.propTypes = {
   prefixCls: PropTypes.string,
   disabled: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'middle', 'large']),
   style: PropTypes.object,
   type: PropTypes.oneOf(['primary', 'secondary', 'outline', 'white']),
   className: PropTypes.string,
@@ -68,7 +69,7 @@ Button.propTypes = {
 };
 Button.defaultProps = {
   prefixCls: 'kuma-button',
-  size: 'medium',
+  size: 'middle',
   type: 'primary',
   disabled: false,
   className: '',

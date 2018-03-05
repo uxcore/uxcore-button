@@ -15,7 +15,7 @@ class Demo extends React.Component {
         <div>
           <h2>{'size:'}</h2>
           <Button size="small">small</Button>
-          <Button size="medium">medium</Button>
+          <Button size="middle">middle</Button>
           <Button size="large">large</Button>
         </div>
         <div>
@@ -69,7 +69,7 @@ class Demo extends React.Component {
         <div>
           <h2>{'loading:'}</h2>
           <Button loading size="small">small</Button>
-          <Button loading size="medium">medium</Button>
+          <Button loading size="middle">middle</Button>
           <Button loading size="large">large</Button>
           <Button loading type="primary">primary</Button>
           <Button loading type="secondary">secondary</Button>
@@ -78,7 +78,7 @@ class Demo extends React.Component {
         <div>
           <h2>{'图标按钮'}</h2>
           <Button size="small"><Icon name="xiazai" />small</Button>
-          <Button size="medium"><Icon name="xiazai" />medium</Button>
+          <Button size="middle"><Icon name="xiazai" />middle</Button>
           <Button size="large"><Icon name="xiazai" />large</Button>
           <Button type="primary"><Icon name="xiazai" />primary</Button>
           <Button type="secondary"><Icon name="xiazai" />secondary</Button>
