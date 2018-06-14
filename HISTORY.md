@@ -1,6 +1,10 @@
 # History
 ----
 
+## 0.4.18
+
+* `CHANEGD` adapt React@16
+
 ## 0.4.17
 
 * `CHANGED` unify prop `size` enumerator naming (from `medium` to `middle`)

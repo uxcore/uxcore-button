@@ -6,5 +6,7 @@
  * All rights reserved.
  */
 
- var Demo = require('./ButtonDemo');
- ReactDOM.render(<Demo/>, document.getElementById('UXCoreDemo'));
+ import ReactDOM from 'react-dom';
+ import React from 'react';
+ import Demo from './ButtonDemo';
+ ReactDOM.render(<Demo />, document.getElementById('UXCoreDemo'));
