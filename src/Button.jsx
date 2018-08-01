@@ -5,8 +5,6 @@ import LoadingIcon from './Loading';
 
 const { Component } = React;
 
-// const LoadingIcon = () => <div />;
-
 const sizeMap = {
   small: 'sm',
   medium: '',
@@ -27,7 +25,7 @@ class Button extends Component {
       loading,
       ghost,
       danger,
-      ...others
+      ...others,
     } = this.props;
     type = disabled ? 'disabled' : type;
     const classNames = classnames(prefixCls, `${prefixCls}-${type}`, {
