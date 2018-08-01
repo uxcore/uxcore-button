@@ -1,6 +1,6 @@
 {
   "name": "uxcore-button",
-  "version": "0.4.18",
+  "version": "0.4.19",
   "description": "uxcore-button ui component for react",
   "main": "build/index.js",
   "scripts": {
@@ -35,7 +35,6 @@
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "1.x",
     "expect.js": "~0.3.1",
-    "kuma-base": "1.x",
     "react": "16.x",
     "react-dom": "16.x",
     "react-test-renderer": "16.x",
@@ -44,6 +43,7 @@
     "uxcore-tools": "^0.3.3"
   },
   "dependencies": {
+    "kuma-base": "1.x",
     "classnames": "^2.1.2",
     "object-assign": "^4.0.0",
     "prop-types": "15.x"

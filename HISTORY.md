@@ -1,6 +1,10 @@
 # History
 ----
 
+## 0.4.19
+
+* `CHANGED` support providing style by js
+
 ## 0.4.18
 
 * `CHANEGD` adapt React@16
