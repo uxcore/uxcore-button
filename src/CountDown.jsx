@@ -25,7 +25,7 @@ class CountDown extends Component {
 
   countFun() {
     let { time } = this.state;
-    this.time = setInterval(() => {
+    this.timer = setInterval(() => {
       if (time > 0) {
         time -= 1;
         this.setState({
@@ -34,7 +34,7 @@ class CountDown extends Component {
       } else {
         const { callback } = this.props;
         callback();
-        clearInterval(this.time);
+        clearInterval(this.timer);
       }
     }, 1000);
   }
@@ -47,7 +47,7 @@ class CountDown extends Component {
         [className]: className,
       })}
       >
-        {time > 0 ? time : ''}
+        {time > 0 ? `(${time})` : ''}
       </span>
     );
   }

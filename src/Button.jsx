@@ -14,7 +14,6 @@ const sizeMap = {
 };
 
 class Button extends Component {
-  
   handleClick = (e) => {
     const { loading, onClick } = this.props;
     if (loading) {
@@ -38,7 +37,7 @@ class Button extends Component {
       ghost,
       danger,
       countDown,
-      countDownCallback,
+      onCountDownEnd,
       ...others
     } = this.props;
     type = disabled ? 'disabled' : type;
@@ -61,7 +60,7 @@ class Button extends Component {
       >
         {loading ? <LoadingIcon className={`${prefixCls}-loading-icon`} /> : null}
         {children}
-        {countDown ? <CountDown className={`${prefixCls}-countdown`} time={countDown} callback={countDownCallback} /> : null }
+        {countDown ? <CountDown className={`${prefixCls}-countdown`} time={countDown} callback={onCountDownEnd} /> : null }
       </button>
     );
   }
@@ -80,6 +79,8 @@ Button.propTypes = {
   loading: PropTypes.bool,
   ghost: PropTypes.bool,
   danger: PropTypes.bool,
+  onCountDownEnd: PropTypes.func,
+  countDown: PropTypes.number,
 };
 Button.defaultProps = {
   prefixCls: 'kuma-button',
@@ -92,6 +93,8 @@ Button.defaultProps = {
   loading: false,
   ghost: false,
   danger: false,
+  onCountDownEnd: () => {},
+  countDown: undefined,
 };
 
 module.exports = Button;
