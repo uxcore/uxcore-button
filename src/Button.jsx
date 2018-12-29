@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import LoadingIcon from './Loading';
+import CountDown from './CountDown';
 
 const { Component } = React;
 
@@ -13,8 +14,18 @@ const sizeMap = {
 };
 
 class Button extends Component {
+  handleClick = (e) => {
+    const { loading, onClick } = this.props;
+    if (loading) {
+      return;
+    }
+    if (onClick) {
+      onClick(e);
+    }
+  }
+
   render() {
-    let type = this.props.type;
+    let { type } = this.props;
     const {
       disabled,
       className,
@@ -25,7 +36,9 @@ class Button extends Component {
       loading,
       ghost,
       danger,
-      ...others,
+      countDown,
+      onCountDownEnd,
+      ...others
     } = this.props;
     type = disabled ? 'disabled' : type;
     const classNames = classnames(prefixCls, `${prefixCls}-${type}`, {
@@ -43,9 +56,11 @@ class Button extends Component {
         type={htmlType}
         className={classNames}
         disabled={disabled}
+        onClick={this.handleClick}
       >
         {loading ? <LoadingIcon className={`${prefixCls}-loading-icon`} /> : null}
         {children}
+        {countDown ? <CountDown className={`${prefixCls}-countdown`} time={countDown} callback={onCountDownEnd} /> : null }
       </button>
     );
   }
@@ -64,6 +79,8 @@ Button.propTypes = {
   loading: PropTypes.bool,
   ghost: PropTypes.bool,
   danger: PropTypes.bool,
+  onCountDownEnd: PropTypes.func,
+  countDown: PropTypes.number,
 };
 Button.defaultProps = {
   prefixCls: 'kuma-button',
@@ -76,6 +93,8 @@ Button.defaultProps = {
   loading: false,
   ghost: false,
   danger: false,
+  onCountDownEnd: () => {},
+  countDown: undefined,
 };
 
 module.exports = Button;

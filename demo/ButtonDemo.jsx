@@ -119,7 +119,7 @@ class Demo extends React.Component {
           <h2>
             {'add event:'}
           </h2>
-          <Button onClick={function () { alert('click me'); }}>
+          <Button onClick={function (e) { alert('click me'); }}>
             click me
           </Button>
         </div>
@@ -173,6 +173,14 @@ class Demo extends React.Component {
           <Button type="outline">
             <Icon name="xiazai" />
             outline
+          </Button>
+        </div>
+        <div>
+          <h2>
+            {'倒计时'}
+          </h2>
+          <Button size="small" countDown={3} onCountDownEnd={() => { console.log(111); }}>
+            small
           </Button>
         </div>
       </div>
