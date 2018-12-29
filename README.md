@@ -36,5 +36,5 @@ http://uxcore.github.io/uxcore/css/button/
 |style|style 属性|object||
 |loading|loading状态|bool|false|
 |countDown|按钮倒计时功能,单位为秒（s）,倒计时结束之后会触发`onCountDownEnd`回调函数|number|undefined|
-|onCountDownEnd|倒计时结束之后的回调函数|bool|false|
+|onCountDownEnd|倒计时结束之后的回调函数|function|noop|
 

@@ -119,7 +119,7 @@ class Demo extends React.Component {
           <h2>
             {'add event:'}
           </h2>
-          <Button onClick={function (e) { alert('click me'); }} >
+          <Button onClick={function (e) { alert('click me'); }}>
             click me
           </Button>
         </div>
@@ -179,7 +179,7 @@ class Demo extends React.Component {
           <h2>
             {'倒计时'}
           </h2>
-          <Button size="small" countDown={3} countDownCallback={() => { console.log(111); }}>
+          <Button size="small" countDown={3} onCountDownEnd={() => { console.log(111); }}>
             small
           </Button>
         </div>
