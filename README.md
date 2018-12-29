@@ -34,7 +34,7 @@ http://uxcore.github.io/uxcore/css/button/
 |className|增加额外的class|string|''|
 |htmlType|html dom 的 type 属性(`submit` `button` `reset`)|string|button|
 |style|style 属性|object||
-|loading|loading状态|bool|false|
+|loading|loading状态, loading 为 true 时不会触发 onClick 动作 |bool|false|
 |countDown|按钮倒计时功能,单位为秒（s）,倒计时结束之后会触发`onCountDownEnd`回调函数|number|undefined|
 |onCountDownEnd|倒计时结束之后的回调函数|function|noop|
 

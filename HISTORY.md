@@ -1,6 +1,11 @@
 # History
 ----
 
+## 0.4.20
+
+* `CHANGED` do not excute onClick while loading
+* `NEW` add count down feature
+
 ## 0.4.19
 
 * `CHANGED` support providing style by js

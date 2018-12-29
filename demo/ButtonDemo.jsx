@@ -6,6 +6,13 @@ import '../style';
 /* eslint-disable react/prefer-stateless-function */
 
 class Demo extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      agreeDisabled: true,
+    };
+  }
   render() {
     return (
       <div>
@@ -151,27 +158,27 @@ class Demo extends React.Component {
             {'图标按钮'}
           </h2>
           <Button size="small">
-            <Icon name="xiazai" />
+            <Icon usei name="xiazai" />
             small
           </Button>
           <Button size="middle">
-            <Icon name="xiazai" />
+            <Icon usei name="xiazai" />
             middle
           </Button>
           <Button size="large">
-            <Icon name="xiazai" />
+            <Icon usei name="xiazai" />
             large
           </Button>
           <Button type="primary">
-            <Icon name="xiazai" />
+            <Icon usei name="xiazai" />
             primary
           </Button>
           <Button type="secondary">
-            <Icon name="xiazai" />
+            <Icon usei name="xiazai" />
             secondary
           </Button>
           <Button type="outline">
-            <Icon name="xiazai" />
+            <Icon usei name="xiazai" />
             outline
           </Button>
         </div>
@@ -179,8 +186,17 @@ class Demo extends React.Component {
           <h2>
             {'倒计时'}
           </h2>
-          <Button size="small" countDown={3} onCountDownEnd={() => { console.log(111); }}>
-            small
+          <Button
+            size="middle"
+            disabled={this.state.agreeDisabled}
+            countDown={10}
+            onCountDownEnd={() => {
+              this.setState({
+                agreeDisabled: false,
+              });
+            }}
+          >
+            同意
           </Button>
         </div>
       </div>
