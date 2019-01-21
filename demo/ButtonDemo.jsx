@@ -28,7 +28,7 @@ class Demo extends React.Component {
           <h2>
             {'size:'}
           </h2>
-          <Button size="small">
+          <Button size="small" ghost={true}>
             small
           </Button>
           <Button size="middle" text>
