@@ -31,7 +31,7 @@ class Demo extends React.Component {
           <Button size="small">
             small
           </Button>
-          <Button size="middle">
+          <Button size="middle" text>
             middle
           </Button>
           <Button size="large">
