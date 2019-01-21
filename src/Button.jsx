@@ -37,11 +37,10 @@ class Button extends Component {
       ghost,
       danger,
       countDown,
-      text,
       onCountDownEnd,
       ...others
     } = this.props;
-    type = disabled ? 'disabled' : text ? 'text' : type;
+    type = disabled ? 'disabled' : type;
     const classNames = classnames(prefixCls, `${prefixCls}-${type}`, {
       [className]: className,
       [`${prefixCls}-${sizeMap[size]}`]: !!sizeMap[size],
@@ -82,7 +81,6 @@ Button.propTypes = {
   danger: PropTypes.bool,
   onCountDownEnd: PropTypes.func,
   countDown: PropTypes.number,
-  text: PropTypes.bool,
 };
 Button.defaultProps = {
   prefixCls: 'kuma-button',
@@ -97,7 +95,6 @@ Button.defaultProps = {
   danger: false,
   onCountDownEnd: () => {},
   countDown: undefined,
-  text: false,
 };
 
 module.exports = Button;
