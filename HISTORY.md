@@ -1,5 +1,7 @@
 # History
 ----
+## 0.4.21
+* `NEW` prop `type` support new value `text`
 
 ## 0.4.20
 
@@ -50,7 +52,7 @@
 `CHANGED` use normal component declaration instead of `stateless function` (#7)
 
 ## 0.4.6
-* `CHANGED` new scaffold & eslint 
+* `CHANGED` new scaffold & eslint
 * `REMOVE` useless source file
 
 ## 0.4.5
@@ -75,7 +77,7 @@
 `CHANGED` update scaffold
 
 ## 0.3.5
-`FIXED` add react require declare 
+`FIXED` add react require declare
 
 ## 0.3.3
 `CHANGED` change props additionClass to className
