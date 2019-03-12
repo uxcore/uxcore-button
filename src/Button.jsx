@@ -72,7 +72,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'middle', 'large']),
   style: PropTypes.object,
-  type: PropTypes.oneOf(['primary', 'secondary', 'outline', 'white']),
+  type: PropTypes.oneOf(['primary', 'secondary', 'outline', 'white', 'text']),
   className: PropTypes.string,
   children: PropTypes.node,
   htmlType: PropTypes.oneOf(['submit', 'button', 'reset']),

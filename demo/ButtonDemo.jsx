@@ -28,10 +28,10 @@ class Demo extends React.Component {
           <h2>
             {'size:'}
           </h2>
-          <Button size="small" ghost={true}>
+          <Button size="small">
             small
           </Button>
-          <Button size="middle" text>
+          <Button size="middle">
             middle
           </Button>
           <Button size="large">
@@ -59,15 +59,23 @@ class Demo extends React.Component {
           <h2>
             type:
           </h2>
-          <Button type="primary">
-            default primary
-          </Button>
-          <Button type="secondary">
-            secondary
-          </Button>
-          <Button type="outline">
-            outline
-          </Button>
+          <div style={{background: '#ddd', padding: '10px'}}>
+            <Button type="primary">
+              default primary
+            </Button>
+            <Button type="secondary">
+              secondary
+            </Button>
+            <Button type="outline">
+              outline
+            </Button>
+            <Button ghost type={"white"}>
+              white
+            </Button>
+            <Button type={"text"}>
+              text
+            </Button>
+          </div>
         </div>
         <div>
           <h2>
